@@ -523,13 +523,13 @@ if [[ "$2" =~ ^(Quick|Basic|UDP|Full|Vulns|Recon|All|quick|basic|udp|full|vulns|
     # CUSTOM ADDITIONS
     DIRS=('Exploits' 'Findings' 'Misc' 'Notes' 'Scans' 'Screenshots')
 
-    for DIR in ${DIRS[@]}; do
+    for DIR in "${DIRS[@]}"; do
         if [[ ! -d $1/$DIR ]]; then
             mkdir "$1"/"$DIR"
         fi
     done
 
-	cd "$1/Scans" || exit
+	cd "$1" || exit
 	
 	if [[ ! -d nmap/ ]]; then
 	        mkdir nmap/
