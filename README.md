@@ -24,6 +24,6 @@ Notes on Buffer Overflow scripts:
 - Taken directly from PWK training guide, they will likely need to be heavily modified to fit the exam program.
 - Use in conjunction with the Buffer Overflow methodology to develop an appropriate script.
 
-# Exam Placeholder
+## Exam Placeholder
 
 Folder for exam day - store notes, screenshots, modified exploits, etc.
