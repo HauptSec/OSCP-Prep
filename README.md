@@ -1,4 +1,4 @@
-<p align=center><img src=Assets/Img/oscp-logo.png></p>
+<p align=center><img src=Assets/Img/OSCP-logo.png></p>
 
 # OSCP-Prep
 
