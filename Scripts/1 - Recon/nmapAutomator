@@ -525,7 +525,7 @@ if [[ "$2" =~ ^(Quick|Basic|UDP|Full|Vulns|Recon|All|quick|basic|udp|full|vulns|
 
     for DIR in ${DIRS[@]}; do
         if [[ ! -d $1/$DIR ]]; then
-            mkdir $1/$DIR
+            mkdir "$1"/"$DIR"
         fi
     done
 
