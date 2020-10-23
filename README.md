@@ -8,7 +8,7 @@ Notes & tools for Off-Sec's OSCP certification exam.
 
 ## Cheatsheets
 
-Enumeration methods, tools, & other useful techniques.
+Enumeration methods, tools, resources, & other useful techniques.
 
 ## Methodology
 
@@ -18,11 +18,11 @@ List of tools & things to check during exam, organized by phase.
 
 Various scripts to use during exam, organized by phase.
 
-Notes on Buffer Overflow scripts:
+**Notes on Buffer Overflow scripts:**
 
-- More for general reference guide.
+- To be used as a general reference guide.
 - Taken directly from PWK training guide, they will likely need to be heavily modified to fit the exam program.
-- Use in conjunction with the Buffer Overflow methodology to develop an appropriate script.
+- Use in conjunction with the [Buffer Overflow Methodology](Methodology/4%20-%20Buffer%20Overflow) & [Buffer Overflow Resources](Cheatsheets/Resources.md#misc) (Cheatsheets > Misc. or Repos > Tools > Buffer Overflow) to develop an appropriate script.
 
 ## Exam Placeholder
 
