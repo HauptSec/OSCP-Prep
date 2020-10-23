@@ -529,7 +529,7 @@ if [[ "$2" =~ ^(Quick|Basic|UDP|Full|Vulns|Recon|All|quick|basic|udp|full|vulns|
         fi
     done
 
-	cd "$1" || exit
+	cd "$1/scans" || exit
 	
 	if [[ ! -d nmap/ ]]; then
 	        mkdir nmap/
