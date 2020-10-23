@@ -1,4 +1,4 @@
-# Reprting
+# Reporting
 
 ## [Faraday](https://github.com/infobyte/faraday)
 
