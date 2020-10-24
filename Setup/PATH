@@ -1,1 +1,2 @@
+# Custom Tools
 export PATH=$PATH:$HOME/Tools/dirsearch # dirsearch
