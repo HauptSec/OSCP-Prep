@@ -6,15 +6,15 @@
 
 # Repo Structure
 
-## Cheatsheets
+## [Cheatsheets](Cheatsheets/README.md)
 
 > Enumeration methods, tools, resources, & other useful techniques.
 
-## Methodology
+## [Methodology](Methodology/README.md)
 
 > List of tools & things to check during exam, organized by phase.
 
-## Scripts
+## [Scripts](Scripts/README.md)
 
 > Various scripts to use during exam, organized by phase.
 
@@ -24,10 +24,10 @@
 > - Taken directly from PWK training guide, they will likely need to be heavily modified to fit the exam program.
 > - Use in conjunction with the [Buffer Overflow Methodology](Methodology/4%20-%20Buffer%20Overflow.md) & [Buffer Overflow Resources](Cheatsheets/Resources.md#misc) (under **Cheatsheets > Misc.** & **Repos > Tools > Buffer Overflow**) to develop an appropriate script.
 
-## Setup
+## [Setup](Setup/README.md)
 
 > Setup resources to automatically install & configure the prerequisite tools for the scripts in this repo.
 
-## Exam Placeholder
+## [Exam Placeholder](Exam%20Placeholder/README.md)
 
 > Folder for exam day - store notes, screenshots, modified exploits, etc.
