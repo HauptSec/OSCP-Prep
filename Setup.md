@@ -21,5 +21,4 @@ Run the [Setup](Setup/Setup.sh) script to automate the steps below.
 
 ```shell
 export PATH=$PATH:$HOME/Tools/dirsearch # dirsearch
-
 ```
