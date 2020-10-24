@@ -75,6 +75,8 @@
 - Add registration token
 - Name
 
+FINISH EDITING: https://docs.agents.faradaysec.com/getting-started/
+
 ## Importing XML Reports
 
 - Community Version Note: Cleanup duplicate vulns from imports
