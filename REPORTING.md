@@ -47,11 +47,6 @@
 - Get Host: `faraday-cli host -a get -hid <host-id>`
 - Create Host: `faraday-cli host -a create -d '[{"ip": "<IP/hostname>", "description": "shortname"}]'`
 
-#### Import Vulnerabilities
-
-- From Report: `faraday-cli report "/path/to/report.xml"`
-- From CLI: `faraday-cli command "<command>"`
-
 ## [Faraday-Client](https://github.com/infobyte/faraday/wiki/Faraday-Client) (Faraday-CLI GUI)
 
 ### Usage
@@ -60,25 +55,34 @@
 - Run command or use `Faraday-Plugin` menu
 - Import XML Reports
 
-## Faraday-Dispatcher
+## Importing Reports
 
-### Install
+### File Browser
 
-1. `pip3 install faraday_agent_dispatcher`
+- Copy reports to `~/.faraday/report/oscp-exam`
+- If there are problems detecting the plugin to parse the report, append `_faraday_<plugin>` to the filename
 
-### Setup
+### Web GUI
 
-1. Generate Configuration File: `faraday-dispatcher config-wizard`
-2. Run Agent: `faraday-dispatcher run`
-3. Complete Agent Configuration:
+- In Workspace, click `Manage`
+- Click `Upload a report` icon: <img src="Assets/Img/Faraday-web-upload.svg" height="25" style="vertical-align:bottom">
+- Click `Select file`
+- Locate & select file in browser
+- Click `Open`
 
-- Add registration token
-- Name
+### Faraday-CLI
 
-FINISH EDITING: https://docs.agents.faradaysec.com/getting-started/
+- Existing Report: `faraday-cli report "/path/to/report.xml"`
+- From Command: `faraday-cli command "<command>"`
 
-## Importing XML Reports
+### Faraday-Client
 
-- Community Version Note: Cleanup duplicate vulns from imports
+- Click `Import report` icon: <img src="Assets/Img/Faraday-client-upload.png" style="vertical-align:bottom">
+- Select plugin from dropdown
+- Click `OK`
+- Locate & select file in browser
+- Click `Open`
+
+**Community Version Note**: Cleanup duplicate vulns manually from imports
 
 ## Plugins
