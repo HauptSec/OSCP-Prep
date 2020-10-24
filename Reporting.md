@@ -13,15 +13,15 @@
 
 #### Workspace
 
-1. Open Web GUI: `http://localhost:5985`
+1. Open Web GUI: **http://localhost:5985**
 2. Login
-3. Click `New`:
-   - Workspace Name: `oscp-exam`
-   - Description: `OSCP Exam Workspace`
-   - Start Date: `Current Date`
-   - End Date: `Tomorrow's Date`
-   - Scope: `CIDR/IP Range`
-4. Click `Save`
+3. Click **New**:
+   - Workspace Name: **oscp-exam**
+   - Description: **OSCP Exam Workspace**
+   - Start Date: **Current Date**
+   - End Date: **Tomorrow's Date**
+   - Scope: **CIDR/IP Range**
+4. Click **Save**
 
 ## [Faraday-CLI](https://github.com/infobyte/faraday-cli)
 
@@ -34,8 +34,8 @@
 ### Setup
 
 1. Login: `faraday-cli auth`
-   - Faraday URL: `http://localhost:5985`
-   - User: `faraday`
+   - Faraday URL: **http://localhost:5985**
+   - User: **faraday**
 2. Add Autocomplete to shell: `echo ". $(pwd)/faraday-cli-autocomplete_zsh.sh" >> $HOME/.zshrc`
 3. Set Default Workspace: `faraday-cli workspace -a select -n oscp-exam`
 
@@ -52,23 +52,23 @@
 ### Usage
 
 - Start: `faraday-client`
-- Run command or use `Faraday-Plugin` menu
+- Run command or use **Faraday-Plugin** menu
 - Import XML Reports
 
 ## Importing Reports
 
 ### File Browser
 
-- Copy reports to `~/.faraday/report/oscp-exam`
+- Copy reports to **~/.faraday/report/oscp-exam**
 - If there are problems detecting the plugin to parse the report, append `_faraday_<plugin>` to the filename
 
 ### Web GUI
 
-- In Workspace, click `Manage`
-- Click `Upload a report` icon: <img src="Assets/Img/Faraday-web-upload.svg" height="25" style="vertical-align:bottom">
-- Click `Select file`
+- In Workspace, click **Manage**
+- Click **Upload a report** icon: <img src="Assets/Img/Faraday-web-upload.svg" height="25" style="vertical-align:bottom">
+- Click **Select file**
 - Locate & select file in browser
-- Click `Open`
+- Click **Open**
 
 ### Faraday-CLI
 
@@ -77,12 +77,25 @@
 
 ### Faraday-Client
 
-- Click `Import report` icon: <img src="Assets/Img/Faraday-client-upload.png" style="vertical-align:bottom">
+- Click **Import report** icon: <img src="Assets/Img/Faraday-client-upload.png" style="vertical-align:bottom">
 - Select plugin from dropdown
-- Click `OK`
+- Click **OK**
 - Locate & select file in browser
-- Click `Open`
+- Click **Open**
 
 **Community Version Note**: Cleanup duplicate vulns manually from imports
 
-## Plugins
+## Useful OSCP Plugins for Reporting
+
+- Dirb
+- Dirsearch
+- DNSenum
+- DNSrecon
+- FTP
+- Hydra
+- Metasploit
+- Netcat
+- Nikto
+- Nmap
+- SSHdefaultscan
+- Telnet
