@@ -1,3 +1,4 @@
+<p align=center><img src=Assets/Img/OSCP-logo.png></p>
 <p align=center><img src=Assets/Img/Logo.png></p>
 
 # Repo Structure
