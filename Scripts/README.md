@@ -1,12 +1,12 @@
 # Scripts
 
-## Recon Scripts
+## [Recon Scripts](1-Recon)
 
 > Scripts for initial recon.
 >
 > - nmapAutomator
 
-## Exploit Scripts
+## [Exploit Scripts](2-Exploit)
 
 > Scripts for exploitation.
 >
@@ -16,17 +16,17 @@
 
 > Scripts for privilege escalation.
 >
-> ### Linux
+> ### [Linux](3-Privilege-Escalation)
 >
 > - linpeas
 > - linux-smart-enumeration (lse)
 >
-> ### Windows
+> ### [Windows](3-Privilege-Escalation/Lin)
 >
 > - powerless
 > - winpeas
 
-## Buffer Overflow
+## [Buffer Overflow](4-Buffer-Overflow/Win)
 
 > Reference scripts for buffer overflow exploit development process.
 >
