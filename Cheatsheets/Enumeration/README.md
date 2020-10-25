@@ -173,8 +173,8 @@
 
 ### Linux
 
-> - ``
+> - Placeholder
 
 ### Windows
 
-> - ``
+> - Placeholder
