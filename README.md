@@ -7,7 +7,7 @@
 
 > Enumeration methods, tools, resources, & other useful techniques.
 
-## [Exam](Exam-Placeholder/README.md)
+## [Exam](Exam/README.md)
 
 > Folder for exam day - store notes, screenshots, modified exploits, etc.
 
