@@ -10,7 +10,7 @@ Using the modified **nmapAutomator** script will automatically create the follow
 .
 └── Host-IP
     ├── Exploits
-    ├── Findings
+    ├── Loot
     ├── Misc
     ├── Notes
     ├── Scans
