@@ -26,7 +26,7 @@
 > - powerless
 > - winpeas
 
-## [Buffer Overflow](4-Buffer-Overflow/Win)
+## [Buffer Overflow](4-Buffer-Overflow)
 
 > Reference scripts for buffer overflow exploit development process.
 >
