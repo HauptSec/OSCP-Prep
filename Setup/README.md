@@ -25,4 +25,5 @@
 >
 > ```shell
 > export PATH=$PATH:$HOME/Tools/dirsearch # dirsearch
+> export PATH=$PATH:$HOME/Tools/Reconnoitre # Reconnoitre
 > ```
