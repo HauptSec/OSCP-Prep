@@ -21,9 +21,6 @@
 > - [S3cur3Th1sSh1t/Pentest-Tools](https://github.com/S3cur3Th1sSh1t/Pentest-Tools)
 > - [The-Art-of-Hacking/h4cker](https://github.com/The-Art-of-Hacking/h4cker)
 > - [six2dez/OSCP-Human-Guide](https://github.com/six2dez/OSCP-Human-Guide/blob/master/oscp_human_guide.md)
-
-### Enumeration
-
 > - [xapax/oscp](https://github.com/xapax/oscp)
 > - [unfo/how-to-oscp-final](https://gist.github.com/unfo/5ddc85671dcf39f877aaf5dce105fac3)
 
