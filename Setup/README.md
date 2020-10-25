@@ -16,6 +16,8 @@
 > - [Reconnoitre](https://github.com/codingo/Reconnoitre)
 >   - `git -C ~/Tools clone https://github.com/codingo/Reconnoitre.git`
 >   - `cd Reconnoitre && python3 setup.py install`
+> - [Evil-WinRM](https://github.com/Hackplayers/evil-winrm)
+>   - `sudo gem install evil-winrm`
 > - [ProxyChains4](https://github.com/haad/proxychains)
 >   - `sudo apt install -y proxychains4`
 
