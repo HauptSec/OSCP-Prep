@@ -5,6 +5,7 @@
 > Scripts for initial recon.
 >
 > - nmapAutomator
+> - kickoff-scans
 
 ## [Exploit Scripts](2-Exploit)
 
