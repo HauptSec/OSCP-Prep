@@ -1,6 +1,6 @@
 # [OSCP Exam Guide](https://help.offensive-security.com/hc/en-us/articles/360040165632-OSCP-Exam-Guide)
 
- Exploit Code
+## Exploit Code
 
 > If you have not made any modifications to an exploit, you should only provide the URL where the exploit can be found. Do not include the full unmodified code, especially if it is several pages long.
 >
@@ -85,7 +85,7 @@
 ## Acknowledgement of Receipt
 
 > Once we successfully review and accept your documentation, a confirmation email will be sent acknowledging receipt. If you have not received a confirmation email after 12 hours have passed, please send us an email at challenges AT offensive-security DOT com . We recommend you to check your email spam and junk folders in case it has been flagged as spam.
->
+
 ## Results
 
 > You will receive an email with your certification exam results (pass/fail) within ten (10) business days after submitting your documentation. If you have passed the exam, you will receive an exam results email containing a link to update and confirm your certificate delivery address. Please note that we do not provide the exam score, solutions to the exam targets, or digital versions of the certificate.
