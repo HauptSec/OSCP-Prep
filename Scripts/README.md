@@ -17,12 +17,12 @@
 
 > Scripts for privilege escalation.
 >
-> ### [Linux](3-Privilege-Escalation)
+> ### [Linux](3-Privilege-Escalation/Lin)
 >
 > - linpeas
 > - linux-smart-enumeration (lse)
 >
-> ### [Windows](3-Privilege-Escalation/Lin)
+> ### [Windows](3-Privilege-Escalation/Win)
 >
 > - powerless
 > - winpeas
