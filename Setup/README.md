@@ -1,6 +1,7 @@
 # Setup
 
 Run the [Setup](Setup/Setup.sh) script to automate the steps below.
+- `git clone https://github.com/Ahaupt3/OSCP-Prep && cd OSCP-Prep/Setup && ./Setup`
 
 ## Install Tools
 
