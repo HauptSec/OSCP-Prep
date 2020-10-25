@@ -1,4 +1,4 @@
-# Exam Placeholder
+# Exam
 
 > Use this folder to store exam notes, scan results, screenshots, video recordings, etc.
 
