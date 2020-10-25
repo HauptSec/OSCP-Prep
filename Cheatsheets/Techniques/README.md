@@ -1,3 +1,3 @@
 # Techniques
 
-- [Proxychains](Proxychains.md)
+> - [Proxychains](Proxychains.md)
