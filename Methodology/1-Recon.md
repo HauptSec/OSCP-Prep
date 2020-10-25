@@ -2,17 +2,17 @@
 
 ## Scanning
 
-- nmapAutomator
-- AutoRecon
-- Reconnoitre
+> - nmapAutomator
+> - AutoRecon
+> - Reconnoitre
 
 ## Web
 
-- Nikto
-- Dirsearch
+> - Nikto
+> - Dirsearch
 
 ## File System
 
-FTP, SSH, SMB, etc.
+> FTP, SSH, SMB, etc.
 
-- Check for anonymous access
+> - Check for anonymous access
