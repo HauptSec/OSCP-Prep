@@ -7,6 +7,10 @@
 
 > Enumeration methods, tools, resources, & other useful techniques.
 
+## [Exam](Exam-Placeholder/README.md)
+
+> Folder for exam day - store notes, screenshots, modified exploits, etc.
+
 ## [Methodology](Methodology/README.md)
 
 > List of tools & things to check during exam, organized by phase.
@@ -24,7 +28,3 @@
 ## [Setup](Setup/README.md)
 
 > Setup resources to automatically install & configure the prerequisite tools for the scripts in this repo.
-
-## [Exam Placeholder](Exam-Placeholder/README.md)
-
-> Folder for exam day - store notes, screenshots, modified exploits, etc.
