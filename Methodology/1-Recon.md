@@ -16,9 +16,15 @@
 
 > - Nikto (included in nmapAutomator script)
 > - Dirsearch (included in nmapAutomator script)
+> - Robots.txt
+> - Page Source
+> - Injection Vectors
+> - Directory Traversal
+> - LFI/RFI
 
 ## Services
 
 > FTP, SSH, SMB, etc - see the [Enumeration Cheatsheet](../Cheatsheets/Enumeration/README.md) for specific commands.
 >
+> - Banner grab
 > - Check for anonymous access
