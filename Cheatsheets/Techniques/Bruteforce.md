@@ -1,4 +1,4 @@
-# Bruteforce
+# Brute Force
 
 ## Methods
 
