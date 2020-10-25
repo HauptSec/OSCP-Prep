@@ -1,6 +1,7 @@
 # Setup
 
 Run the [Setup](Setup/Setup.sh) script to automate the steps below.
+
 - `git clone https://github.com/Ahaupt3/OSCP-Prep && cd OSCP-Prep/Setup && ./Setup`
 
 ## Install Tools
@@ -11,10 +12,6 @@ Run the [Setup](Setup/Setup.sh) script to automate the steps below.
   - `git -C ~/Tools clone https://github.com/maurosoria/dirsearch.git`
 - [ProxyChains4](https://github.com/haad/proxychains)
   - `sudo apt install -y proxychains4`
-- []()
-  - <command>
-- []()
-  - <command>
 
 ## Add to Path
 
