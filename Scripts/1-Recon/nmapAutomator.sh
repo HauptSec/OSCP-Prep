@@ -62,20 +62,20 @@ echo -e ""
 }
 
 assignPorts(){
-if [ -f nmap/Quick_"$1".nmap ]; then
-	basicPorts=$(cat nmap/Quick_"$1".nmap | grep open | cut -d " " -f 1 | cut -d "/" -f 1 | tr "\n" "," | cut -c3- | head -c-2)
+if [ -f nmapAutomator/Quick_"$1".nmap ]; then
+	basicPorts=$(cat nmapAutomator/Quick_"$1".nmap | grep open | cut -d " " -f 1 | cut -d "/" -f 1 | tr "\n" "," | cut -c3- | head -c-2)
 fi
 
-if [ -f nmap/Full_"$1".nmap ]; then
-	if [ -f nmap/Quick_"$1".nmap ]; then
-		allPorts=$(cat nmap/Quick_"$1".nmap nmap/Full_"$1".nmap | grep open | cut -d " " -f 1 | cut -d "/" -f 1 | tr "\n" "," | cut -c3- | head -c-1)
+if [ -f nmapAutomator/Full_"$1".nmap ]; then
+	if [ -f nmapAutomator/Quick_"$1".nmap ]; then
+		allPorts=$(cat nmapAutomator/Quick_"$1".nmap nmapAutomator/Full_"$1".nmap | grep open | cut -d " " -f 1 | cut -d "/" -f 1 | tr "\n" "," | cut -c3- | head -c-1)
 	else
-		allPorts=$(cat nmap/Full_"$1".nmap | grep open | cut -d " " -f 1 | cut -d "/" -f 1 | tr "\n" "," | head -c-1)
+		allPorts=$(cat nmapAutomator/Full_"$1".nmap | grep open | cut -d " " -f 1 | cut -d "/" -f 1 | tr "\n" "," | head -c-1)
 	fi
 fi
 
-if [ -f nmap/UDP_"$1".nmap ]; then
-	udpPorts=$(cat nmap/UDP_"$1".nmap | grep -w "open " | cut -d " " -f 1 | cut -d "/" -f 1 | tr "\n" "," | cut -c3- | head -c-2)
+if [ -f nmapAutomator/UDP_"$1".nmap ]; then
+	udpPorts=$(cat nmapAutomator/UDP_"$1".nmap | grep -w "open " | cut -d " " -f 1 | cut -d "/" -f 1 | tr "\n" "," | cut -c3- | head -c-2)
 	if [[ "$udpPorts" == "Al" ]]; then
 		udpPorts=""
 	fi
@@ -108,19 +108,19 @@ fi
 cmpPorts(){
 oldIFS=$IFS
 IFS=','
-touch nmap/cmpPorts_"$1".txt
+touch nmapAutomator/cmpPorts_"$1".txt
 
 for i in $(echo "${allPorts}")
 do
 	if [[ "$i" =~ ^($(echo "${basicPorts}" | sed 's/,/\|/g'))$ ]]; then
        	       :
        	else
-       	        echo -n "$i," >> nmap/cmpPorts_"$1".txt
+       	        echo -n "$i," >> nmapAutomator/cmpPorts_"$1".txt
        	fi
 done
 
-extraPorts=$(cat nmap/cmpPorts_"$1".txt | tr "\n" "," | head -c-1)
-rm nmap/cmpPorts_"$1".txt
+extraPorts=$(cat nmapAutomator/cmpPorts_"$1".txt | tr "\n" "," | head -c-1)
+rm nmapAutomator/cmpPorts_"$1".txt
 IFS=$oldIFS
 }
 
@@ -128,7 +128,7 @@ quickScan(){
 echo -e "${GREEN}---------------------Starting Nmap Quick Scan---------------------"
 echo -e "${NC}"
 
-$nmapType -T4 --max-retries 1 --max-scan-delay 20 --defeat-rst-ratelimit --open -oN nmap/Quick_"$1".nmap -oX -oX nmap/XML/Quick_"$1".xml "$1"
+$nmapType -T4 --max-retries 1 --max-scan-delay 20 --defeat-rst-ratelimit --open -oN nmapAutomator/Quick_"$1".nmap -oX -oX nmapAutomator/XML/Quick_"$1".xml "$1"
 assignPorts "$1"
 
 echo -e ""
@@ -143,11 +143,11 @@ echo -e "${NC}"
 if [ -z $(echo "${basicPorts}") ]; then
         echo -e "${YELLOW}No ports in quick scan.. Skipping!"
 else
-	$nmapType -sCV -p$(echo "${basicPorts}") -oN nmap/Basic_"$1".nmap -oX nmap/XML/Basic_"$1".xml "$1" 
+	$nmapType -sCV -p$(echo "${basicPorts}") -oN nmapAutomator/Basic_"$1".nmap -oX nmapAutomator/XML/Basic_"$1".xml "$1" 
 fi
 
-if [ -f nmap/Basic_"$1".nmap ] && [[ ! -z $(cat nmap/Basic_"$1".nmap | grep -w "Service Info: OS:") ]]; then
-	serviceOS=$(cat nmap/Basic_"$1".nmap | grep -w "Service Info: OS:" | cut -d ":" -f 3 | cut -c2- | cut -d ";" -f 1 | head -c-1)
+if [ -f nmapAutomator/Basic_"$1".nmap ] && [[ ! -z $(cat nmapAutomator/Basic_"$1".nmap | grep -w "Service Info: OS:") ]]; then
+	serviceOS=$(cat nmapAutomator/Basic_"$1".nmap | grep -w "Service Info: OS:" | cut -d ":" -f 3 | cut -c2- | cut -d ";" -f 1 | head -c-1)
 	if [[ "$osType" != "$serviceOS"  ]]; then
 		osType=$(echo "${serviceOS}")
 		echo -e "${NC}"
@@ -166,7 +166,7 @@ UDPScan(){
 echo -e "${GREEN}----------------------Starting Nmap UDP Scan----------------------"
 echo -e "${NC}"
 
-$nmapType -sU --max-retries 1 --open -oN nmap/UDP_"$1".nmap -oX nmap/XML/UDP_"$1".xml "$1"
+$nmapType -sU --max-retries 1 --open -oN nmapAutomator/UDP_"$1".nmap -oX nmapAutomator/XML/UDP_"$1".xml "$1"
 assignPorts "$1"
 
 if [ ! -z $(echo "${udpPorts}") ]; then
@@ -174,10 +174,10 @@ if [ ! -z $(echo "${udpPorts}") ]; then
         echo ""
         echo -e "${YELLOW}Making a script scan on UDP ports: $(echo "${udpPorts}" | sed 's/,/, /g')"
         echo -e "${NC}"
-	if [ -f /usr/share/nmap/scripts/vulners.nse ]; then
-        	$nmapType -sCVU --script vulners --script-args mincvss=7.0 -p$(echo "${udpPorts}") -oN nmap/UDP_"$1".nmap -oX nmap/XML/UDP_"$1".xml "$1"
+	if [ -f /usr/share/nmapAutomator/scripts/vulners.nse ]; then
+        	$nmapType -sCVU --script vulners --script-args mincvss=7.0 -p$(echo "${udpPorts}") -oN nmapAutomator/UDP_"$1".nmap -oX nmapAutomator/XML/UDP_"$1".xml "$1"
 	else
-        	$nmapType -sCVU -p$(echo "${udpPorts}") -oN nmap/UDP_"$1".nmap -oX nmap/XML/UDP_"$1".xml "$1"
+        	$nmapType -sCVU -p$(echo "${udpPorts}") -oN nmapAutomator/UDP_"$1".nmap -oX nmapAutomator/XML/UDP_"$1".xml "$1"
 	fi
 fi
 
@@ -190,7 +190,7 @@ fullScan(){
 echo -e "${GREEN}---------------------Starting Nmap Full Scan----------------------"
 echo -e "${NC}"
 
-$nmapType -p- --max-retries 1 --max-rate 500 --max-scan-delay 20 -T4 -v -oN nmap/Full_"$1".nmap -oX nmap/XML/Full_"$1".xml "$1"
+$nmapType -p- --max-retries 1 --max-rate 500 --max-scan-delay 20 -T4 -v -oN nmapAutomator/Full_"$1".nmap -oX nmapAutomator/XML/Full_"$1".xml "$1"
 assignPorts "$1"
 
 if [ -z $(echo "${basicPorts}") ]; then
@@ -198,7 +198,7 @@ if [ -z $(echo "${basicPorts}") ]; then
         echo ""
         echo -e "${YELLOW}Making a script scan on all ports"
         echo -e "${NC}"
-        $nmapType -sCV -p$(echo "${allPorts}") -oN nmap/Full_"$1".nmap -oX nmap/XML/Full_"$1".xml "$1"
+        $nmapType -sCV -p$(echo "${allPorts}") -oN nmapAutomator/Full_"$1".nmap -oX nmapAutomator/XML/Full_"$1".xml "$1"
 	assignPorts "$1"
 else
 	cmpPorts "$1"
@@ -207,14 +207,14 @@ else
         	echo ""
 		allPorts=""
         	echo -e "${YELLOW}No new ports"
-		rm nmap/Full_"$1".nmap
+		rm nmapAutomator/Full_"$1".nmap
         	echo -e "${NC}"
 	else
 		echo ""
         	echo ""
         	echo -e "${YELLOW}Making a script scan on extra ports: $(echo "${extraPorts}" | sed 's/,/, /g')"
         	echo -e "${NC}"
-        	$nmapType -sCV -p$(echo "${extraPorts}") -oN nmap/Full_"$1".nmap -oX nmap/XML/Full_"$1".xml "$1"
+        	$nmapType -sCV -p$(echo "${extraPorts}") -oN nmapAutomator/Full_"$1".nmap -oX nmapAutomator/XML/Full_"$1".xml "$1"
 		assignPorts "$1"
 	fi
 fi
@@ -237,7 +237,7 @@ else
 fi
 
 
-if [ ! -f /usr/share/nmap/scripts/vulners.nse ]; then
+if [ ! -f /usr/share/nmapAutomator/scripts/vulners.nse ]; then
 	echo -e "${RED}Please install 'vulners.nse' nmap script:"
 	echo -e "${RED}https://github.com/vulnersCom/nmap-vulners"
         echo -e "${RED}"
@@ -246,14 +246,14 @@ if [ ! -f /usr/share/nmap/scripts/vulners.nse ]; then
 else    
 	echo -e "${YELLOW}Running CVE scan on $portType ports"
 	echo -e "${NC}"
-	$nmapType -sV --script vulners --script-args mincvss=7.0 -p$(echo "${ports}") -oN nmap/CVEs_"$1".nmap -oX nmap/XML/CVEs_"$1".xml "$1"
+	$nmapType -sV --script vulners --script-args mincvss=7.0 -p$(echo "${ports}") -oN nmapAutomator/CVEs_"$1".nmap -oX nmapAutomator/XML/CVEs_"$1".xml "$1"
 	echo ""
 fi
 
 echo ""
 echo -e "${YELLOW}Running Vuln scan on $portType ports"
 echo -e "${NC}"
-$nmapType -sV --script vuln -p$(echo "${ports}") -oN nmap/Vulns_"$1".nmap -oX nmap/XML/Vulns_"$1".xml "$1"
+$nmapType -sV --script vuln -p$(echo "${ports}") -oN nmapAutomator/Vulns_"$1".nmap -oX nmapAutomator/XML/Vulns_"$1".xml "$1"
 echo -e ""
 echo -e ""
 echo -e ""
@@ -261,9 +261,9 @@ echo -e ""
 
 recon(){
 
-reconRecommend "$1" | tee nmap/Recon_"$1".nmap
+reconRecommend "$1" | tee nmapAutomator/Recon_"$1".nmap
 
-availableRecon=$(cat nmap/Recon_"$1".nmap | grep "$1" | cut -d " " -f 1 | sed 's/.\///g; s/.py//g; s/cd/odat/g;' | sort -u | tr "\n" "," | sed 's/,/,\ /g' | head -c-2)
+availableRecon=$(cat nmapAutomator/Recon_"$1".nmap | grep "$1" | cut -d " " -f 1 | sed 's/.\///g; s/.py//g; s/cd/odat/g;' | sort -u | tr "\n" "," | sed 's/,/,\ /g' | head -c-2)
 
 secs=30
 count=0
@@ -309,18 +309,18 @@ echo -e "${NC}"
 oldIFS=$IFS
 IFS=$'\n'
 
-if [ -f nmap/Full_"$1".nmap ] && [ -f nmap/Basic_"$1".nmap ]; then
+if [ -f nmapAutomator/Full_"$1".nmap ] && [ -f nmapAutomator/Basic_"$1".nmap ]; then
 	ports=$(echo "${allPorts}")
-	file=$(cat nmap/Basic_"$1".nmap nmap/Full_"$1".nmap | grep -w "open")
-elif [ -f nmap/Full_"$1".nmap ]; then
+	file=$(cat nmapAutomator/Basic_"$1".nmap nmapAutomator/Full_"$1".nmap | grep -w "open")
+elif [ -f nmapAutomator/Full_"$1".nmap ]; then
 	ports=$(echo "${allPorts}")
-	file=$(cat nmap/Quick_"$1".nmap nmap/Full_"$1".nmap | grep -w "open")
-elif [ -f nmap/Basic_"$1".nmap ]; then
+	file=$(cat nmapAutomator/Quick_"$1".nmap nmapAutomator/Full_"$1".nmap | grep -w "open")
+elif [ -f nmapAutomator/Basic_"$1".nmap ]; then
 	ports=$(echo "${basicPorts}")
-	file=$(cat nmap/Basic_"$1".nmap | grep -w "open")
+	file=$(cat nmapAutomator/Basic_"$1".nmap | grep -w "open")
 else
 	ports=$(echo "${basicPorts}")
-	file=$(cat nmap/Quick_"$1".nmap | grep -w "open")
+	file=$(cat nmapAutomator/Quick_"$1".nmap | grep -w "open")
 
 fi
 
@@ -353,11 +353,11 @@ for line in $file; do
 	fi
 done
 
-if [ -f nmap/Basic_"$1".nmap ]; then
-	cms=$(cat nmap/Basic_"$1".nmap | grep http-generator | cut -d " " -f 2)
+if [ -f nmapAutomator/Basic_"$1".nmap ]; then
+	cms=$(cat nmapAutomator/Basic_"$1".nmap | grep http-generator | cut -d " " -f 2)
 	if [ ! -z $(echo "${cms}") ]; then
 		for line in $cms; do
-			port=$(cat nmap/Basic_"$1".nmap | grep "$line" -B1 | grep -w "open" | cut -d "/" -f 1)
+			port=$(cat nmapAutomator/Basic_"$1".nmap | grep "$line" -B1 | grep -w "open" | cut -d "/" -f 1)
 			if [[ "$cms" =~ ^(Joomla|WordPress|Drupal)$ ]]; then
 				echo -e "${NC}"
 				echo -e "${YELLOW}CMS Recon:"
@@ -394,7 +394,7 @@ elif [[ ! -z $(echo "${file}" | grep -w "139/tcp") ]] && [[ $osType == "Linux" ]
 fi
 
 
-if [ -f nmap/UDP_"$1".nmap ] && [[ ! -z $(cat nmap/UDP_"$1".nmap | grep open | grep -w "161/udp") ]]; then
+if [ -f nmapAutomator/UDP_"$1".nmap ] && [[ ! -z $(cat nmapAutomator/UDP_"$1".nmap | grep open | grep -w "161/udp") ]]; then
 	echo -e "${NC}"
 	echo -e "${YELLOW}SNMP Recon:"
 	echo -e "${NC}"
@@ -457,9 +457,9 @@ if [[ ! -d recon/ ]]; then
 fi
 
 if [ "$2" == "All" ]; then
-	reconCommands=$(cat nmap/Recon_"$1".nmap | grep "$1" | grep -v odat)
+	reconCommands=$(cat nmapAutomator/Recon_"$1".nmap | grep "$1" | grep -v odat)
 else
-	reconCommands=$(cat nmap/Recon_"$1".nmap | grep "$1" | grep "$2")
+	reconCommands=$(cat nmapAutomator/Recon_"$1".nmap | grep "$1" | grep "$2")
 fi
 
 for line in $(echo "${reconCommands}"); do
@@ -534,8 +534,8 @@ if [[ "$2" =~ ^(Quick|Basic|UDP|Full|Vulns|Recon|All|quick|basic|udp|full|vulns|
 
 	cd "$1/Scans" || exit
 	
-	if [[ ! -d nmap/ ]]; then
-	        mkdir -p nmap/XML
+	if [[ ! -d nmapAutomator/ ]]; then
+	        mkdir -p nmapAutomator/XML
 	fi
 	
 	assignPorts "$1"
@@ -544,14 +544,14 @@ if [[ "$2" =~ ^(Quick|Basic|UDP|Full|Vulns|Recon|All|quick|basic|udp|full|vulns|
 	
 	case "$2" in
 		Quick | quick) 	quickScan "$1";;
-		Basic | basic)	if [ ! -f nmap/Quick_"$1".nmap ]; then quickScan "$1"; fi
+		Basic | basic)	if [ ! -f nmapAutomator/Quick_"$1".nmap ]; then quickScan "$1"; fi
 				basicScan "$1";;
 		UDP | udp) 	UDPScan "$1";;
 		Full | full) 	fullScan "$1";;
-		Vulns | vulns) 	if [ ! -f nmap/Quick_"$1".nmap ]; then quickScan "$1"; fi
+		Vulns | vulns) 	if [ ! -f nmapAutomator/Quick_"$1".nmap ]; then quickScan "$1"; fi
 				vulnsScan "$1";;
-		Recon | recon) 	if [ ! -f nmap/Quick_"$1".nmap ]; then quickScan "$1"; fi
-				if [ ! -f nmap/Basic_"$1".nmap ]; then basicScan "$1"; fi
+		Recon | recon) 	if [ ! -f nmapAutomator/Quick_"$1".nmap ]; then quickScan "$1"; fi
+				if [ ! -f nmapAutomator/Basic_"$1".nmap ]; then basicScan "$1"; fi
 				recon "$1";;
 		All | all)	quickScan "$1"
 				basicScan "$1"
