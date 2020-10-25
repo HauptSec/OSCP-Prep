@@ -1,12 +1,12 @@
 # Setup
 
-> Run the [Setup](Setup/Setup.sh) script to automate the steps below.
+> Run the [Setup](Setup.sh) script to automate the steps below.
 >
 > - `git clone https://github.com/Ahaupt3/OSCP-Prep && cd OSCP-Prep/Setup && ./Setup`
 
 ## Install Tools
 
-> - [Modified nmapAutomator](Scripts/nmapAutomator.sh)
+> - [Modified nmapAutomator](../Scripts/nmapAutomator.sh)
 >   - `sudo curl https://raw.githubusercontent.com/Ahaupt3/OSCP-Prep/main/Scripts/1-Recon/nmapAutomator -o /usr/bin/local/nmapAutomator`
 > - [Dirsearch](https://github.com/maurosoria/dirsearch)
 >   - `git -C ~/Tools clone https://github.com/maurosoria/dirsearch.git`
