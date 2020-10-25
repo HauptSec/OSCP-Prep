@@ -7,7 +7,7 @@
 
 ## Install Tools
 
-> - [Modified nmapAutomator](../Scripts/1-Recon/nmapAutomator.sh)
+> - [Modified nmapAutomator](/Scripts/1-Recon/nmapAutomator.sh)
 >   - `sudo curl https://raw.githubusercontent.com/Ahaupt3/OSCP-Prep/main/Scripts/1-Recon/nmapAutomator -o /usr/bin/local/nmapAutomator`
 > - [Dirsearch](https://github.com/maurosoria/dirsearch)
 >   - `git -C ~/Tools clone https://github.com/maurosoria/dirsearch.git`
