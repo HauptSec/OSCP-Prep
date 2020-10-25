@@ -7,12 +7,11 @@
 Using the modified **nmapAutomator** script will automatically create the following directory structure for every host scanned:
 
 ```
-├── Host-IP
-│   ├── Exploits
-│   ├── Findings
-│   ├── Misc
-│   ├── Notes
-│   ├── Scans
-│   └── Screenshots
-└── Recordings
+└── Host-IP
+    ├── Exploits
+    ├── Findings
+    ├── Misc
+    ├── Notes
+    ├── Scans
+    └── Screenshots
 ```
