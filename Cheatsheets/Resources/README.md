@@ -2,6 +2,8 @@
 
 ## Cheatsheets
 
+**\*** Denotes most useful resources
+
 ### Methodology
 
 > - [TJnull's Preparation Guide for PWK/OSCP](https://www.netsecfocus.com/oscp/2019/03/29/The_Journey_to_Try_Harder-_TJNulls_Preparation_Guide_for_PWK_OSCP.html)
@@ -20,7 +22,7 @@
 > - [rewardone/OSCPRepo](https://github.com/rewardone/OSCPRepo)
 > - [S3cur3Th1sSh1t/Pentest-Tools](https://github.com/S3cur3Th1sSh1t/Pentest-Tools)
 > - [The-Art-of-Hacking/h4cker](https://github.com/The-Art-of-Hacking/h4cker)
-> - [six2dez/OSCP-Human-Guide](https://github.com/six2dez/OSCP-Human-Guide/blob/master/oscp_human_guide.md)
+> - [six2dez/OSCP-Human-Guide](https://github.com/six2dez/OSCP-Human-Guide/blob/master/oscp_human_guide.md) **\***
 > - [xapax/oscp](https://github.com/xapax/oscp)
 > - [unfo/how-to-oscp-final](https://gist.github.com/unfo/5ddc85671dcf39f877aaf5dce105fac3)
 
