@@ -1,3 +1,3 @@
 # Scripts
 
-- Update with more info on scripts folder
+- Update with more info on scripts
