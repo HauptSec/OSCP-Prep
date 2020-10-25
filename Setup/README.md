@@ -2,7 +2,7 @@
 
 > Run the [Setup](Setup.sh) script to automate the steps below.
 >
-> - `git clone https://github.com/Ahaupt3/OSCP-Prep && cd OSCP-Prep/Setup && ./Setup`
+> - `git clone https://github.com/Ahaupt3/OSCP-Prep && cd OSCP-Prep/Setup && ./Setup.sh`
 > - **Note**: Setup script links `python3/pip3` to `python/pip` commands. Use `python2.7` for normal `python2` commands.
 
 ## Install Tools
