@@ -79,7 +79,7 @@
 > - Directories:
 >   - `nikto -host http(s)://<ip>:<port> (-ssl)`
 >   - `dirsearch -w /usr/share/wordlists/dirb/common.txt -t 30 --full-url -e <extensions> -u http(s)://<ip>:<port>`
-> - SSL: 
+> - SSL:
 >   - Cert Info (get usernames/vhosts): `sslscan <ip>`
 >   - Heartbleed: `nmap --script=ssl-heartbleed -p 443 <ip>`
 > - Check Input Validation (injection vectors):
@@ -103,7 +103,7 @@
 
 ### rpcbind - 111
 
-> - Get Info: 
+> - Get Info:
 >   - `rpcinfo -p <ip>`
 >   - `rpcclient -U "" <ip>`
 >     - `srvinfo`
@@ -165,7 +165,7 @@
 
 ### WinRM - 5985
 
-> - Connect: 
+> - Connect:
 >   - Password: `evil-winrm -i <ip> -u <username> -p <password>`
 >   - Hash: `evil-winrm -i <ip> -u <username> -H <hash>`
 
