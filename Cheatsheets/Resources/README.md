@@ -14,7 +14,7 @@
 > - [Hakluke’s Ultimate OSCP Guide](https://medium.com/@hakluke/haklukes-ultimate-oscp-guide-part-3-practical-hacking-tips-and-tricks-c38486f5fc97)
 > - [Penetration Testing Tools Cheat Sheet](https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/)
 > - [OSCP Goldmine](http://0xc0ffee.io/blog/OSCP-Goldmine)
-> - [OSCP > - Useful Resources](https://backdoorshell.gitbooks.io/oscp-useful-links/content/)
+> - [OSCP - Useful Resources](https://backdoorshell.gitbooks.io/oscp-useful-links/content/)
 > - [Passing OSCP](https://scund00r.com/all/oscp/2018/02/25/passing-oscp.html)
 > - [pentestbook](https://chryzsh.gitbooks.io/pentestbook/content/)
 > - [RustyShackleford221/OSCP-Prep](https://github.com/RustyShackleford221/OSCP-Prep)
