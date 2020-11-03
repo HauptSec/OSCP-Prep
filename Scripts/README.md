@@ -24,8 +24,8 @@
 >
 > ### [Windows](3-Privilege-Escalation/Win)
 >
-> - powerless
 > - winpeas
+> - powerless
 
 ## [Buffer Overflow](4-Buffer-Overflow)
 

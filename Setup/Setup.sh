@@ -12,7 +12,7 @@ sudo cp "$SCRDIR"/nmapAutomator.sh /usr/local/bin/nmapAutomator
 sudo cp "$SCRDIR"/kickoff-scans.sh /usr/local/bin/kickoffscans
 git -C ~/Tools clone https://github.com/maurosoria/dirsearch.git && cd dirsearch && mv dirsearch.py dirsearch && cd ..
 sudo python -m pip install git+https://github.com/Tib3rius/AutoRecon.git
-git -C ~/Tools clone https://github.com/codingo/Reconnoitre.git && cd Reconnoitre && sudo python setup.py install && cd ..
+git -C ~/Tools clone https://github.com/codingo/Reconnoitre.git && cd Reconnoitre && sudo python setup.py install && sudo mv /usr/local/bin/Reconnoitre /usr/local/bin/reconnoitre cd ..
 sudo gem install evil-winrm
 
 # Update PATH

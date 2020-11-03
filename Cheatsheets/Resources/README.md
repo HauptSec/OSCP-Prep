@@ -43,12 +43,12 @@
 > - [Gr1mmie/Practical-Ethical-Hacking-Resources](https://github.com/Gr1mmie/Practical-Ethical-Hacking-Resources)
 > - [Fuzzy Security](http://www.fuzzysecurity.com/tutorials.html) (tutorials)
 
-### Tools
-
-#### Users:
+### Users
 
 > - [pentestmonkey](https://github.com/pentestmonkey?tab=repositories)
 > - [strongcourage](https://github.com/strongcourage?tab=repositories)
+
+### Tools
 
 #### Notes:
 
