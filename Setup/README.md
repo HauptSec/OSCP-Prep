@@ -7,8 +7,10 @@
 
 ## Install Tools
 
+### Required for Scripts
+
 > - [Modified nmapAutomator](/Scripts/1-Recon/nmapAutomator.sh)
->   - `sudo curl https://raw.githubusercontent.com/Ahaupt3/OSCP-Prep/main/Scripts/1-Recon/nmapAutomator -o /usr/bin/local/nmapAutomator`
+>   - `sudo curl https://raw.githubusercontent.com/Ahaupt3/OSCP-Prep/main/Scripts/1-Recon/nmapAutomator.sh -o /usr/local/bin/nmapAutomator && sudo chmod +x /usr/local/bin/nmapAutomator`
 > - [Dirsearch](https://github.com/maurosoria/dirsearch)
 >   - `git -C ~/Tools clone https://github.com/maurosoria/dirsearch.git`
 > - [AutoRecon](https://github.com/Tib3rius/AutoRecon)
@@ -16,6 +18,11 @@
 > - [Reconnoitre](https://github.com/codingo/Reconnoitre)
 >   - `git -C ~/Tools clone https://github.com/codingo/Reconnoitre.git`
 >   - `cd Reconnoitre && python3 setup.py install`
+> - [Kickoffscans](/Scripts/1-Recon/kickoffscans.sh)
+>   - `sudo curl https://raw.githubusercontent.com/Ahaupt3/OSCP-Prep/main/Scripts/1-Recon/kickoffscans.sh -o /usr/local/bin/kickoffscans && sudo chmod +x /usr/local/bin/kickoffscans`
+
+### Additional Tools
+
 > - [Evil-WinRM](https://github.com/Hackplayers/evil-winrm)
 >   - `sudo gem install evil-winrm`
 > - [ProxyChains4](https://github.com/haad/proxychains)
