@@ -65,7 +65,7 @@
 ### Web GUI
 
 > - In Workspace, click **Manage**
-> - Click **Upload a report** icon: <img src="Assets/Img/Faraday-web-upload.svg" height="25" style="vertical-align:bottom">
+> - Click **Upload a report** icon: <img src="../Assets/Img/Faraday-web-upload.svg" height="25" style="vertical-align:bottom">
 > - Click **Select file**
 > - Locate & select file in browser
 > - Click **Open**
@@ -77,7 +77,7 @@
 
 ### Faraday-Client
 
-> - Click **Import report** icon: <img src="Assets/Img/Faraday-client-upload.png" style="vertical-align:bottom">
+> - Click **Import report** icon: <img src="../Assets/Img/Faraday-client-upload.png" style="vertical-align:bottom">
 > - Select plugin from dropdown
 > - Click **OK**
 > - Locate & select file in browser
