@@ -7,10 +7,6 @@
 
 > Enumeration methods, tools, resources, & other useful techniques.
 
-## [Exam](Exam/README.md)
-
-> Folder for exam day - store notes, screenshots, modified exploits, etc.
-
 ## [Methodology](Methodology/README.md)
 
 > List of tools & things to check during exam, organized by phase.
