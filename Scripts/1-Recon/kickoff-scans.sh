@@ -1,18 +1,19 @@
 #!/bin/bash
 
-# Update IPs before running
-IPS=('<ip1>' '<ip2>' '<ip3>' '<ip4>' '<ip5>')
+# Usage
+# kickoffscans IP1 IP2 IP3 IP4 IP5
 
 # Create Exam directory
 mkdir ~/Documents/OSCP-Exam && cd ~/Documents/OSCP-Exam || exit
+for IP in "${[@]}"; do mkdir --parents "$IP"/Scans/nmapAutomator "$IP"/Scans/reconnoitre "$IP"/Scans/autorecon; done || exit
 
 # nmapAutomator
-for IP in "${IPS[@]}"; do nmapAutomator "$IP" All; done
-
-# autorecon
-for IP in "${IPS[@]}"; do autorecon "$IP" --only-scans-dir -o autorecon; done
-for IP in "${IPS[@]}"; do cp autorecon/"$IP"/scans "$IP"/Scans/autorecon; done
+for IP in "${[@]}"; do nmapAutomator "$IP" All; done
 
 # reconnoitre
-for IP in "${IPS[@]}"; do Reconnoitre -t "$IP" --dns --snmp --services --hostnames --virtualhosts; done
-for IP in "${IPS[@]}"; do cp reconnoitre/"$IP"/scans "$IP"/Scans/reconnoitre; done
+for IP in "${[@]}"; do reconnoitre -t "$IP" --dns --snmp --services --hostnames --virtualhosts -o "$IP"/Scans/reconnoitre; done
+
+# autorecon
+for IP in "${[@]}"; do autorecon "$IP" --only-scans-dir -o autorecon; done
+for IP in "${[@]}"; do mv autorecon/"$IP"/scans/* "$IP"/Scans/autorecon; done
+rm -r autorecon
