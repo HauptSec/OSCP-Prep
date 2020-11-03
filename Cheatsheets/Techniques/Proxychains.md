@@ -8,7 +8,7 @@
 
 ### Configuration
 
-> 1. Edit config file: `sudo vi /etc/proxychains4.conf`
+> 1. Edit config file: `sudo vi /etc/proxychains.conf`
 > 2. Add new lines using this format: `<type> <host> <port> <auth>` **auth optional**
 >
 > - Valid proxy types: **socks4**, **socks5**, **http**, **https**
