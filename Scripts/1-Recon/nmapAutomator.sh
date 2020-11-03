@@ -127,7 +127,7 @@ quickScan() {
 	echo -e "${GREEN}---------------------Starting Nmap Quick Scan---------------------"
 	echo -e "${NC}"
 
-	$nmapType -T4 --max-retries 1 --max-scan-delay 20 --defeat-rst-ratelimit --open -oN nmapAutomator/Quick_"$1".nmap -oX -oX nmapAutomator/XML/Quick_"$1".xml "$1"
+	$nmapType -T4 --max-retries 1 --max-scan-delay 20 --defeat-rst-ratelimit --open -oN nmapAutomator/Quick_"$1".nmap -oX nmapAutomator/XML/Quick_"$1".xml "$1"
 	assignPorts "$1"
 
 	echo -e ""
@@ -173,7 +173,7 @@ UDPScan() {
 		echo ""
 		echo -e "${YELLOW}Making a script scan on UDP ports: $(echo "${udpPorts}" | sed 's/,/, /g')"
 		echo -e "${NC}"
-		if [ -f /usr/share/nmapAutomator/scripts/vulners.nse ]; then
+		if [ -f /usr/share/nmap/scripts/vulners.nse ]; then
 			$nmapType -sCVU --script vulners --script-args mincvss=7.0 -p$(echo "${udpPorts}") -oN nmapAutomator/UDP_"$1".nmap -oX nmapAutomator/XML/UDP_"$1".xml "$1"
 		else
 			$nmapType -sCVU -p$(echo "${udpPorts}") -oN nmapAutomator/UDP_"$1".nmap -oX nmapAutomator/XML/UDP_"$1".xml "$1"
