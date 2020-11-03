@@ -1,4 +1,5 @@
-From: https://github.com/V1n1v131r4/OSCP-Buffer-Overflow
+Repo: https://github.com/V1n1v131r4/OSCP-Buffer-Overflow
+Additional Tutorial: https://github.com/justinsteven/dostackbufferoverflowgood/blob/master/dostackbufferoverflowgood_tutorial.pdf
 
 # OSCP Buffer Overflow Cheat Sheet
 
