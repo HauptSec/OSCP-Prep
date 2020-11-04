@@ -1,7 +1,7 @@
 #!/bin/bash
 
 GREEN='\033[0;32m'
-BOLD='\033[1;4m'
+BOLD='\033[1m'
 YELLOW='\033[0;33m'
 
 if [ ! -d ~/Tools ]; then
