@@ -68,10 +68,37 @@
 >
 > Hydra-GTK (preinstalled on Kali)
 
-## Wordlists
+# Precompiled Wordlists
 
-> ### Precompiled Lists
->
 > - Seclists (preinstalled on Kali)
+> - RockYou (preinstalled on Kali)
+> - [Awesome Wordlists](https://github.com/gmelodie/awesome-wordlists)
+> - [OneWordlistToListThemAll](https://github.com/mamatb/OneWordlistToListThemAll)
+
+# Generating Wordlists
+
+> ## Cewl
 >
-> ### Generating Wordlists
+> ### Arguments
+>
+> |      Argument      | Usage |                        Options                         |
+> | :----------------: | :---: | :----------------------------------------------------: |
+> |   Write to File    |  -w   |                        filename                        |
+> |  Depth to Spider   |  -d   |                       # of depth                       |
+> | Minumum Wordlength |  -m   |                      # of length                       |
+> |  Spider Metadata   |  -a   |                        filename                        |
+> |   Spider Emails    |  -e   |                        filename                        |
+> |      Use Auth      |       | See [Docs](https://digi.ninja/projects/cewl.php#usage) |
+>
+> ### Example Usage
+>
+> - Spider Site: `cewl -w <file> <url>`
+> - Spider Metadata: `cewl -m -w <file> <url>`
+> - Spider Emails: `cewl -e <file> <url>`
+>
+> ## Additional Tools
+>
+> - [John the Ripper](https://netsec.ws/?p=457)
+> - [Wordlister](https://github.com/4n4nk3/Wordlister)
+> - [CUPP](https://github.com/Mebus/cupp)
+> - [Bopscrk](https://github.com/r3nt0n/bopscrk)
