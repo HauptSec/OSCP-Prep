@@ -3,3 +3,4 @@
 
 # Expert-Ignore
 .gitignore export-ignore
+.gitattributes export-ignore
