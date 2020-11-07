@@ -54,8 +54,8 @@
 > | Tasks (threads) |       -t       | # of concurrent tasks |
 > |      Port       |       -s       |  non-standard ports   |
 > |     HTTP/S      | http-post-form |      see example      |
-> |       SSH       |     ssh://     |      see example      |
-> |       FTP       |     ftp://     |      see example      |
+> |       SSH       |      ssh       |      see example      |
+> |       FTP       |      ftp       |      see example      |
 >
 > Additional protocols are available as well
 >
