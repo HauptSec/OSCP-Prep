@@ -1,0 +1,5 @@
+# LF Normalization
+* text eol=lf
+
+# Expert-Ignore
+.gitignore export-ignore
