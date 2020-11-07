@@ -5,7 +5,7 @@
 
 ## Scanning
 
-> - [nmapAutomator](/Scripts1-Recon/nmapAutomator.sh)
+> - [nmapAutomator](/Scripts/1-Recon/nmapAutomator.sh)
 >   - `nmapAutomator <ip> All`
 > - [AutoRecon](https://github.com/Tib3rius/AutoRecon)
 >   - `autorecon <ip> --only-scans-dir`
