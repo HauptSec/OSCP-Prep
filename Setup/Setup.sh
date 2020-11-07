@@ -12,8 +12,6 @@ echo -e "${GREEN}Linking Python3/Pip3 to Python/Pip${YELLOW}"
 sudo rm /usr/bin/python
 sudo ln -s /usr/bin/python3 /usr/bin/python
 sudo apt install -y python3-pip
-sudo rm /usr/bin/pip
-sudo ln -s /usr/bin/pip3 /usr/bin/pip
 echo -e ""
 
 # Install Required Tools
