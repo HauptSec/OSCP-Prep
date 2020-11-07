@@ -1,11 +1,11 @@
 # Recon Methodology
 
 > - Create an exam directory for results & run all scans below within that directory.
-> - Update with exam IPs & run the [kickoff-scans](/Scripts/1-Recon/kickoff-scans.sh) script to automate the scans below.
+> - Update with exam IPs & run the [kickoff-scans](/Scripts/1-Recon/kickoffscans.sh) script to automate the scans below.
 
 ## Scanning
 
-> - [nmapAutomator](/Scripts/nmapAutomator.sh)
+> - [nmapAutomator](/Scripts1-Recon/nmapAutomator.sh)
 >   - `nmapAutomator <ip> All`
 > - [AutoRecon](https://github.com/Tib3rius/AutoRecon)
 >   - `autorecon <ip> --only-scans-dir`
