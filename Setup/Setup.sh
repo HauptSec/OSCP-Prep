@@ -3,6 +3,8 @@
 GREEN='\033[0;1;32m'
 YELLOW='\033[0;33m'
 
+TOOLS=~/Tools
+
 if [ ! -d ~/Tools ]; then
     mkdir ~/Tools || exit
 fi
@@ -49,10 +51,10 @@ echo -e "${GREEN}Updating PATH${YELLOW}"
 if [ -f .zshrc ]
 then
     echo "" >> ~/.zshrc
-    curl https://raw.githubusercontent.com/Ahaupt3/OSCP-Prep/main/Setup/PATH >> ~/.zshrc
+    echo -e 'export PATH="${PATH}":$(ls -d ~/Tools/* | tr "\\n" ":" | sed "s/:$//")' >> .zshrc
     echo -e "${GREEN}Finished - Run: source ~/.zshrc"
 else
     echo "" >> ~/.bashrc
-    curl https://raw.githubusercontent.com/Ahaupt3/OSCP-Prep/main/Setup/PATH >> ~/.bashrc
+    echo -e 'export PATH="${PATH}":$(ls -d ~/Tools/* | tr "\\n" ":" | sed "s/:$//")' >> .bashrc
     echo -e "${GREEN}Finished - Run: source ~/.bashrc"
 fi
