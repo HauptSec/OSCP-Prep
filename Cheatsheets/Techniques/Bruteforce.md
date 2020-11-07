@@ -19,6 +19,8 @@
 > - Dict+Mask: `hashcat -a 6 -m <#> <hashfile> <wordlist> <mask-pattern>`
 >   - Example: `hashcat -a 6 example.dict ?d?d?d?d`
 >   - Output: `password0000, password0001, password0002`
+>
+> Reference the BHIS cheat sheet above for additional usage info.
 
 ## John the Ripper
 
