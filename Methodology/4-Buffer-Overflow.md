@@ -35,3 +35,4 @@
 
 > - [Tib3rius/Pentest-Cheatsheets](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rst)
 > - [V1n1v131r4/OSCP-Buffer-Overflow](https://github.com/V1n1v131r4/OSCP-Buffer-Overflow)
+> - [Liodeus](https://liodeus.github.io/2020/09/18/OSCP-personal-cheatsheet.html)
