@@ -521,7 +521,7 @@ if [[ "$2" =~ ^(Quick|Basic|UDP|Full|Vulns|Recon|All|quick|basic|udp|full|vulns|
 	fi
 
 	# CUSTOM ADDITIONS
-	DIRS=('Exploits' 'Loot' 'Misc' 'Notes' 'Scans' 'Screenshots')
+	DIRS=('Exploits' 'Loot' 'Notes' 'Scans' 'Screenshots')
 
 	for DIR in "${DIRS[@]}"; do
 		if [[ ! -d $1/$DIR ]]; then

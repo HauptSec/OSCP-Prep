@@ -35,8 +35,7 @@
 > └── OSCP-Exam  
 >     ├── IP1  
 >     │   ├── Exploits  
->     │   ├── Loot  
->     │   ├── Misc  
+>     │   ├── Loot   
 >     │   ├── Notes  
 >     │   ├── Scans  
 >     │   │   ├── autorecon  
