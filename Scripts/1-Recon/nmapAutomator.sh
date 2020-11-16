@@ -340,11 +340,11 @@ reconRecommend() {
 				#echo "sslyze --regular $1 | tee recon/sslyze_$1_$port.txt"
 				echo "sslscan $1 | tee recon/sslscan_$1_$port.txt"
 				#echo "gobuster dir -w /usr/share/wordlists/dirb/common.txt -l -t 30 -e -k -x $pages -u https://$1:$port -o recon/gobuster_$1_$port.txt"
-				echo "dirsearch -w /usr/share/wordlists/dirb/common.txt -t 30 --full-url -e $pages -u https://$1:$port --plain-text-report=recon/dirsearch_$1_$port.txt --json-report=recon/dirsearch_$1_$port.json"
+				echo "dirsearch -w /usr/share/seclists/Discovery/raft-medium-words.txt -t 30 --full-url -e $pages -u https://$1:$port --plain-text-report=recon/dirsearch_$1_$port.txt --json-report=recon/dirsearch_$1_$port.json"
 				echo "nikto -host https://$1:$port -ssl -o recon/nikto_$1_$port.xml | tee recon/nikto_$1_$port.txt"
 			else
 				#echo "gobuster dir -w /usr/share/wordlists/dirb/common.txt -l -t 30 -e -k -x $pages -u http://$1:$port -o recon/gobuster_$1_$port.txt"
-				echo "dirsearch -w /usr/share/wordlists/dirb/common.txt -t 30 --full-url -e $pages -u http://$1:$port --plain-text-report=recon/dirsearch_$1_$port.txt --json-report=recon/dirsearch_$1_$port.json"
+				echo "dirsearch -w /usr/share/seclists/Discovery/raft-medium-words.txt -t 30 --full-url -e $pages -u http://$1:$port --plain-text-report=recon/dirsearch_$1_$port.txt --json-report=recon/dirsearch_$1_$port.json"
 				echo "nikto -host $1:$port -o recon/nikto_$1_$port.xml | tee recon/nikto_$1_$port.txt"
 			fi
 			echo ""
