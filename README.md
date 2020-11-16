@@ -38,9 +38,8 @@
 >     │   ├── Loot   
 >     │   ├── Notes  
 >     │   ├── Scans  
->     │   │   ├── autorecon  
->     │   │   ├── nmapAutomator  
->     │   │   └── reconnoitre  
+>     │   │   ├── autorecon    
+>     │   │   └── nmapAutomator  
 >     │   └── Screenshots  
 >     ├── IP2  
 >     ├── IP3  
