@@ -28,3 +28,22 @@
 ## [Setup](Setup/README.md)
 
 > Setup resources to automatically install & configure the prerequisite tools for the scripts in this repo.
+
+## [Kickoff-Scans Directory Structure](Scripts/1-Recon/kickoffscans.sh)
+
+> ~  
+> └── OSCP-Exam  
+>     ├── IP1  
+>     │   ├── Exploits  
+>     │   ├── Loot  
+>     │   ├── Misc  
+>     │   ├── Notes  
+>     │   ├── Scans  
+>     │   │   ├── autorecon  
+>     │   │   ├── nmapAutomator  
+>     │   │   └── reconnoitre  
+>     │   └── Screenshots  
+>     ├── IP2  
+>     ├── IP3  
+>     ├── IP4  
+>     └── IP5
