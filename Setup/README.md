@@ -5,6 +5,10 @@
 > - `git clone https://github.com/Ahaupt3/OSCP-Prep && cd OSCP-Prep/Setup && sudo ./Setup.sh`
 > - **Note**: Setup script links `python3/pip3` to `python/pip` commands. Use `python2.7` for normal `python2` commands.
 
+## Nix-Setup
+
+> - *Optional*: See this Repo for my normal *NIX box setup - [Nix-Setup](https://github.com/Ahaupt3/Nix-Setup)
+
 ## Install Tools
 
 ### Required for Scripts
