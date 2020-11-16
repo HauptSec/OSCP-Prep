@@ -3,7 +3,7 @@
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 
-EXAMDIR=~/Documents/OSCP-Exam
+EXAMDIR=~/OSCP-Exam
 SCANDIRS=(Scans/{nmapAutomator,autorecon})
 
 # Usage
