@@ -78,7 +78,8 @@
 > - Fingerprint: `nc -nv <ip> 80/443`
 > - Directories:
 >   - `nikto -host http(s)://<ip>:<port> (-ssl)`
->   - `dirsearch -w /usr/share/wordlists/dirb/common.txt -t 30 --full-url -e <extensions> -u http(s)://<ip>:<port>`
+>   - `dirsearch -w /path/to/wordlist -t 30 --full-url -e <extensions> -u http(s)://<ip>:<port>`
+>   - `ffuf -w /path/to/wordlist -e <extensions> -u <target>/FUZZ`
 > - SSL:
 >   - Cert Info (get usernames/vhosts): `sslscan <ip>`
 >   - Heartbleed: `nmap --script=ssl-heartbleed -p 443 <ip>`
