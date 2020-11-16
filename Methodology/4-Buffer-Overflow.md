@@ -54,6 +54,7 @@ See [V1n1v131r4-Scripts](/Scripts/4-Buffer-Overflow/V1n1v131r4-Scripts/README.md
 > - [V1n1v131r4/OSCP-Buffer-Overflow](https://github.com/V1n1v131r4/OSCP-Buffer-Overflow)
 > - [justinsteven/dostackbufferoverflowgood](https://github.com/justinsteven/dostackbufferoverflowgood)
 > - [LegendBegins/Overflow-Helper](https://github.com/LegendBegins/Overflow-Helper)
+> - [butter0verflow/bofhelper](https://github.com/butter0verflow/bofhelper)
 > - [rdoix/Buffer-Overflow-Cheat-Sheet](https://github.com/rdoix/Buffer-Overflow-Cheat-Sheet)
 > - [Tib3rius/Pentest-Cheatsheets](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rst)
 > - [Liodeus](https://liodeus.github.io/2020/09/18/OSCP-personal-cheatsheet.html)
