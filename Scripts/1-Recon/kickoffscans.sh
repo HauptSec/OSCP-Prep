@@ -4,7 +4,7 @@ GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 
 EXAMDIR=~/Documents/OSCP-Exam
-SCANDIRS=(Scans/{nmapAutomator,reconnoitre,autorecon})
+SCANDIRS=(Scans/{nmapAutomator,autorecon})
 
 # Usage
 # kickoffscans IP1 IP2 IP3 IP4 IP5
