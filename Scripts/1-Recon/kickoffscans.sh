@@ -49,9 +49,6 @@ done
 # nmapAutomator
 for IP in "$@"; do nmapAutomator "$IP" All; done
 
-# reconnoitre
-for IP in "$@"; do reconnoitre -t "$IP" --dns --snmp --services --hostnames --virtualhosts -o "$IP"/Scans/reconnoitre; done
-
 # autorecon
 for IP in "$@"; do autorecon "$IP" --only-scans-dir -o autorecon; done
 for IP in "$@"; do mv autorecon/"$IP"/scans/* "$IP"/Scans/autorecon; done
