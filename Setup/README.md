@@ -17,14 +17,14 @@
 >   - `sudo python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git`
 > - [Kickoffscans](/Scripts/1-Recon/kickoffscans.sh)
 >   - `sudo curl https://raw.githubusercontent.com/Ahaupt3/OSCP-Prep/main/Scripts/1-Recon/kickoffscans.sh -o /usr/local/bin/kickoffscans && sudo chmod +x /usr/local/bin/kickoffscans`
-> - [ffuf](https://github.com/ffuf/ffuf/)
->   - `sudo apt install -y golang`
->   - `go get -u github.com/ffuf/ffuf`
 
 ### Additional Tools
 
 > - [Evil-WinRM](https://github.com/Hackplayers/evil-winrm)
 >   - `sudo gem install evil-winrm`
+> - [ffuf](https://github.com/ffuf/ffuf/)
+>   - `sudo apt install -y golang`
+>   - `go get -u github.com/ffuf/ffuf`
 > - [ProxyChains4](https://github.com/haad/proxychains)
 >   - `sudo apt install -y proxychains4`
 
