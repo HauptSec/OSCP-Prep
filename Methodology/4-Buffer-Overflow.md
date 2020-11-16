@@ -17,6 +17,22 @@
 
 > 1. Run increase-overflow script to attempt increasing overflow size
 > 2. If successful, run bad-char script
+>
+> - On the debug machine, we can generate a file which contains the same list of badchars with the help of python:
+>
+> ```python
+> badchar_test = ""
+>   badchars = [0x00, 0x0A, 0xAD]
+>   for i in range(0x00, 0xFF+1):
+>   	  if i not in badchars:
+>        badchar_test += chr(i)
+>   with open("badchar_test.bin", "wb") as f:
+>      f.write(badchar_test)
+> ```
+>
+> - Now, we can compare the contents of stack pointed by esp and the file using mona module:
+>
+>   `!mona compare -a esp -f C:\Python27\badchar_test.bin`
 
 ## Find Return Address
 
