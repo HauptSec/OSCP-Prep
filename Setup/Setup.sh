@@ -33,9 +33,6 @@ echo -e "${GREEN}Installing autorecon${YELLOW}"
 sudo python -m pip install git+https://github.com/Tib3rius/AutoRecon.git
 echo -e ""
 
-echo -e "${GREEN}Installing reconnoitre${YELLOW}"
-git -C ~/Tools clone https://github.com/codingo/Reconnoitre.git && cd ~/Tools/Reconnoitre && sudo python setup.py install && cd ~ || exit
-echo -e ""
 
 # Install Additional Tools
 echo -e "${GREEN}Installing evil-winrm${YELLOW}"

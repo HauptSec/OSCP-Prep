@@ -15,11 +15,11 @@
 >   - `git -C ~/Tools clone https://github.com/maurosoria/dirsearch.git`
 > - [AutoRecon](https://github.com/Tib3rius/AutoRecon)
 >   - `sudo python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git`
-> - [Reconnoitre](https://github.com/codingo/Reconnoitre)
->   - `git -C ~/Tools clone https://github.com/codingo/Reconnoitre.git`
->   - `cd Reconnoitre && python3 setup.py install`
 > - [Kickoffscans](/Scripts/1-Recon/kickoffscans.sh)
 >   - `sudo curl https://raw.githubusercontent.com/Ahaupt3/OSCP-Prep/main/Scripts/1-Recon/kickoffscans.sh -o /usr/local/bin/kickoffscans && sudo chmod +x /usr/local/bin/kickoffscans`
+> - [ffuf](https://github.com/ffuf/ffuf/)
+>   - `sudo apt install -y golang`
+>   - `go get -u github.com/ffuf/ffuf`
 
 ### Additional Tools
 
@@ -35,4 +35,12 @@
 > ```shell
 > export PATH=$PATH:$HOME/Tools/dirsearch # dirsearch
 > export PATH=$PATH:$HOME/Tools/Reconnoitre # Reconnoitre
+> export PATH="${PATH}":/usr/share/doc/python3-impacket/examples/ # Impacket
+> export PATH="${PATH}":~/go/bin # Go binaries - ffuf
 > ```
+
+## Symlink to Home DIR
+
+> - /usr/share/seclists
+> - /usr/share/wordlists
+> - /usr/share/doc/python3-impacket/examples
