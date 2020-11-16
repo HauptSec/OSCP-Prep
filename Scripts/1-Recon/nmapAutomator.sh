@@ -235,7 +235,7 @@ vulnsScan() {
 		ports=$(echo "${allPorts}")
 	fi
 
-	if [ ! -f /usr/share/nmapAutomator/scripts/vulners.nse ]; then
+	if [ ! -f /usr/share/nmap/scripts/vulners.nse ]; then
 		echo -e "${RED}Please install 'vulners.nse' nmap script:"
 		echo -e "${RED}https://github.com/vulnersCom/nmap-vulners"
 		echo -e "${RED}"
