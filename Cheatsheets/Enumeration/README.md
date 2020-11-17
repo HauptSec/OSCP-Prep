@@ -163,7 +163,7 @@
 >
 > - Nmap Scripts: `nmap --script=msrpc-enum -p 135 <ip>`
 
-## NetBios - 137/138/139
+### NetBios - 137/138/139
 
 > https://book.hacktricks.xyz/pentesting/137-138-139-pentesting-netbios
 
@@ -257,7 +257,7 @@
 
 > https://book.hacktricks.xyz/pentesting/1521-1522-1529-pentesting-oracle-listener
 
-## NFS - 2049
+### NFS - 2049
 
 > https://book.hacktricks.xyz/pentesting/nfs-service-pentesting
 >
@@ -272,14 +272,14 @@
 
 > https://book.hacktricks.xyz/pentesting/3299-pentesting-saprouter
 
-## MySQL - 3306
+### MySQL - 3306
 
 > https://book.hacktricks.xyz/pentesting/pentesting-mysql
 >
 > - Nmap Scripts: `nmap --script=mysql-databases.nse,mysql-empty-password.nse,mysql-enum.nse,mysql-info.nse,mysql-variables.nse,mysql-vuln-cve2012-2122.nse -p 3306 <ip>`
 > - Admin Login: `mysql --host=<ip> -u root -p`
 
-## RDP - 3389
+### RDP - 3389
 
 > https://book.hacktricks.xyz/pentesting/pentesting-rdp
 >
@@ -352,7 +352,7 @@
 
 > https://book.hacktricks.xyz/pentesting/50030-50060-50070-50075-50090-pentesting-hadoop
 
-## Tools
+## Tools Cheatsheet
 
 > - [Cheatsheet](https://compass-security.com/fileadmin/Research/White_Papers/2019-01_hacking-tools-cheat-sheet.pdf)
 
