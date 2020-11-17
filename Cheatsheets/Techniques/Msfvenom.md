@@ -54,6 +54,7 @@
 
 ## Cheatsheets
 
+> - [HackTricks.xyz](https://book.hacktricks.xyz/shells/shells)
 > - [rapid7/metasploit-framework](https://github.com/rapid7/metasploit-framework/wiki/How-to-use-msfvenom)
 > - [SANS](https://www.sans.org/security-resources/sec560/misc_tools_sheet_v1.pdf)
 > - [frizb/MSF-Venom-Cheatsheet](https://github.com/frizb/MSF-Venom-Cheatsheet)
