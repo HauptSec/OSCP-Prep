@@ -352,6 +352,10 @@
 
 > https://book.hacktricks.xyz/pentesting/50030-50060-50070-50075-50090-pentesting-hadoop
 
+## Tools
+
+> - [Cheatsheet](https://compass-security.com/fileadmin/Research/White_Papers/2019-01_hacking-tools-cheat-sheet.pdf)
+
 ## OS
 
 ### Linux
