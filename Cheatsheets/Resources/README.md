@@ -6,6 +6,7 @@
 
 ### Methodology
 
+> - [HackTricks.xyz](https://book.hacktricks.xyz/) **\***
 > - [TJnull's Preparation Guide for PWK/OSCP](https://www.netsecfocus.com/oscp/2019/03/29/The_Journey_to_Try_Harder-_TJNulls_Preparation_Guide_for_PWK_OSCP.html)
 > - [OSCP Methodology](https://paper.dropbox.com/doc/OSCP-Methodology-EnVX7VSiNGZ2K2QxCZD7Q)
 > - [Total OSCP Guide](https://sushant747.gitbooks.io/total-oscp-guide/)
