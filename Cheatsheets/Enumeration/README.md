@@ -318,7 +318,7 @@
 >
 > - Connect:
 >   - Password: `evil-winrm -i <ip> -u <username> -p <password>`
->   - Hash: `evil-winrm -i <ip> -u <username
+>   - Hash: `evil-winrm -i <ip> -u <username> -H <hash>`
 
 ### X11 - 6000
 
