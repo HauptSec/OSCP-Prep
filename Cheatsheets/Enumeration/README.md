@@ -169,7 +169,9 @@
 
 ### SMB - 139/445
 
-> https://book.hacktricks.xyz/pentesting/pentesting-smb
+> https://book.hacktricks.xyz/pentesting/pentesting-smb  
+> https://www.willhackforsushi.com/sec504/SMB-Access-from-Linux.pdf  
+> https://tldp.org/HOWTO/SMB-HOWTO-8.html
 >
 > - Fingerprint: `nc -nv <ip> 139/445`
 > - List Shares: `smbclient -L \\\\<ip>`
