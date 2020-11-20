@@ -9,11 +9,26 @@ if [ ! -d ~/Tools ]; then
     mkdir ~/Tools || exit
 fi
 
-# Link Python3/Pip3 to Python/Pip command
-echo -e "${GREEN}Linking Python3/Pip3 to Python/Pip${YELLOW}"
+# Install pyenv for python2
+echo -e "${GREEN}Installing pyenv${YELLOW}"
+sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl git
+if [ -f ~/.zshrc ]
+then
+    echo "" >> ~/.zshrc
+    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+    echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+    echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
+    source ~/.zshrc
+else
+    echo "" >> ~/.bashrc
+    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+    echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+    echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bashrc
+    source ~/.bashrc
+fi
 sudo rm /usr/bin/python
-sudo ln -s /usr/bin/python3 /usr/bin/python
-sudo apt install -y python3-pip
+pyenv install 2.7.18
+pyenv global 2.7.18
 echo -e ""
 
 # Install Required Tools
@@ -48,6 +63,11 @@ sudo apt install -y golang
 go get -u github.com/ffuf/ffuf
 echo -e ""
 
+# Link to Home directory
+sudo ln -s /usr/share/seclists ~/Seclists
+sudo ln -s /usr/share/wordlists ~/Wordlists
+sudo ln -s /usr/share/doc/python3-impacket/examples/ ~/Impacket
+
 # Update PATH
 echo -e "${GREEN}Updating PATH${YELLOW}"
 if [ -f ~/.zshrc ]
@@ -64,8 +84,3 @@ else
     echo -e "export PATH="${PATH}":~/go/bin" >> .bashrc
     echo -e "${GREEN}Finished - Run: source ~/.bashrc"
 fi
-
-# Link to Home directory
-sudo ln -s /usr/share/seclists ~/Seclists
-sudo ln -s /usr/share/wordlists ~/Wordlists
-sudo ln -s /usr/share/doc/python3-impacket/examples/ ~/Impacket
