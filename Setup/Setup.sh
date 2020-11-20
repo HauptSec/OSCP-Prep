@@ -26,7 +26,7 @@ else
     echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bashrc
     source ~/.bashrc
 fi
-sudo rm /usr/bin/python
+sudo rm /usr/bin/python /usr/bin/pip
 pyenv install 2.7.18
 pyenv global 2.7.18
 echo -e ""
