@@ -73,12 +73,14 @@ echo -e "${GREEN}Updating PATH${YELLOW}"
 if [ -f ~/.zshrc ]
 then
     echo "" >> ~/.zshrc
+    echo -e 'alias pyserve="sudo python3 -m http.server 80"'
     echo -e 'export PATH="${PATH}":$(ls -d ~/Tools/* | tr "\\n" ":" | sed "s/:$//")' >> .zshrc
     echo -e "export PATH="${PATH}":/usr/share/doc/python3-impacket/examples/" >> .zshrc
     echo -e "export PATH="${PATH}":~/go/bin" >> .zshrc
     echo -e "${GREEN}Finished - Run: source ~/.zshrc"
 else
     echo "" >> ~/.bashrc
+    echo -e 'alias pyserve="sudo python3 -m http.server 80"'
     echo -e 'export PATH="${PATH}":$(ls -d ~/Tools/* | tr "\\n" ":" | sed "s/:$//")' >> .bashrc
     echo -e "export PATH="${PATH}":/usr/share/doc/python3-impacket/examples/" >> .bashrc
     echo -e "export PATH="${PATH}":~/go/bin" >> .bashrc
