@@ -14,8 +14,6 @@
 
 > - [Modified nmapAutomator](/Scripts/1-Recon/nmapAutomator.sh)
 >   - `sudo curl https://raw.githubusercontent.com/Ahaupt3/OSCP-Prep/main/Scripts/1-Recon/nmapAutomator.sh -o /usr/local/bin/nmapAutomator && sudo chmod +x /usr/local/bin/nmapAutomator`
-> - [Dirsearch](https://github.com/maurosoria/dirsearch)
->   - `git -C ~/Tools clone https://github.com/maurosoria/dirsearch.git`
 > - [AutoRecon](https://github.com/Tib3rius/AutoRecon)
 >   - `sudo python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git`
 > - [Kickoffscans](/Scripts/1-Recon/kickoffscans.sh)
@@ -36,7 +34,6 @@
 > - Append to RC file:
 >
 > ```shell
-> export PATH=$PATH:$HOME/Tools/dirsearch # dirsearch
 > export PATH=$PATH:$HOME/Tools/Reconnoitre # Reconnoitre
 > export PATH="${PATH}":/usr/share/doc/python3-impacket/examples/ # Impacket
 > export PATH="${PATH}":~/go/bin # Go binaries - ffuf
