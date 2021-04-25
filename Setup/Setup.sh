@@ -40,14 +40,9 @@ echo -e "${GREEN}Installing kickoffscans${YELLOW}"
 sudo curl https://raw.githubusercontent.com/Ahaupt3/OSCP-Prep/main/Scripts/1-Recon/kickoffscans.sh -o /usr/local/bin/kickoffscans && sudo chmod +x /usr/local/bin/kickoffscans
 echo -e ""
 
-echo -e "${GREEN}Installing dirsearch${YELLOW}"
-git -C ~/Tools clone https://github.com/maurosoria/dirsearch.git && cd ~/Tools/dirsearch && mv dirsearch.py dirsearch && cd ~ || exit
-echo -e ""
-
 echo -e "${GREEN}Installing autorecon${YELLOW}"
 sudo python -m pip install git+https://github.com/Tib3rius/AutoRecon.git
 echo -e ""
-
 
 # Install Additional Tools
 echo -e "${GREEN}Installing evil-winrm${YELLOW}"
