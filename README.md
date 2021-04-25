@@ -3,7 +3,7 @@
 
 # Website
 
-## [HauptSec.xyz/OSCP](https://hauptsec.xyz)
+## [HauptSec.xyz/OSCP](https://hauptsec.xyz/OSCP)
 
 # Repo Structure
 
